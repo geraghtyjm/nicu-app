@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,12 +21,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2V5-vn-ldU">
-                                <rect key="frame" x="0.0" y="0.0" width="740" height="510"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2V5-vn-ldU" userLabel="timerView">
+                                <rect key="frame" x="0.0" y="0.0" width="740" height="484"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Na-CU-7Yb">
-                                        <rect key="frame" x="0.0" y="0.0" width="740" height="44"/>
+                                        <rect key="frame" x="0.0" y="11" width="740" height="44"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <items>
                                             <barButtonItem systemItem="play" id="fxD-sH-EKf">
@@ -47,11 +47,11 @@
                                         </items>
                                     </toolbar>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8G-bf-9Ui">
-                                        <rect key="frame" x="0.0" y="44" width="740" height="466"/>
+                                        <rect key="frame" x="0.0" y="78" width="740" height="406"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </scrollView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTw-BG-c5Q" userLabel="timerLabel">
-                                        <rect key="frame" x="103" y="12" width="42" height="21"/>
+                                        <rect key="frame" x="108" y="23" width="95" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -60,19 +60,188 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qla-tI-tQE" userLabel="swapView">
+                                <rect key="frame" x="0.0" y="482" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZq-gu-NZ2">
+                                        <rect key="frame" x="392" y="-39" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F6W-iv-Z4O">
+                                        <rect key="frame" x="0.0" y="3" width="1024" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <items>
+                                            <barButtonItem title="Basic" id="4z6-Pu-c4h">
+                                                <connections>
+                                                    <action selector="basicButtonWithSender:" destination="BYZ-38-t0r" id="g1C-7K-S59"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Cardiac Interventions" id="RTq-xS-sos">
+                                                <connections>
+                                                    <action selector="cardiacButtonWithSender:" destination="BYZ-38-t0r" id="JSb-dw-vmT"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Medications" id="2aj-HD-i9w">
+                                                <connections>
+                                                    <action selector="medButtonWithSender:" destination="BYZ-38-t0r" id="7EY-Sa-MaL"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Assessment" id="klK-bc-cnl">
+                                                <connections>
+                                                    <action selector="assessButtonWithSender:" destination="BYZ-38-t0r" id="JNa-sW-RTs"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Special Cases" id="Emx-t3-tmC">
+                                                <connections>
+                                                    <action selector="specialButtonWithSender:" destination="BYZ-38-t0r" id="SFQ-go-kUP"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="Procedures" id="x3O-WG-Fe1">
+                                                <connections>
+                                                    <action selector="procViewWithSender:" destination="BYZ-38-t0r" id="hd0-m0-aEl"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3B-JT-7FX" userLabel="cardiacView">
+                                <rect key="frame" x="0.0" y="530" width="1024" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bEL-4y-Lyz">
+                                        <rect key="frame" x="507" y="2" width="517" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Cardiac 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXY-jb-Qxe">
+                                        <rect key="frame" x="0.0" y="-4" width="508" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Cardiac 1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pk5-tW-xY2" userLabel="procedureView">
+                                <rect key="frame" x="0.0" y="530" width="1024" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV4-4P-gYf" userLabel="Procedure 2">
+                                        <rect key="frame" x="495" y="4" width="529" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Basic 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ovu-Sk-2fi" userLabel="Procedure 1">
+                                        <rect key="frame" x="0.0" y="4" width="495" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Basic 1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3es-Jr-ilY" userLabel="specialView">
+                                <rect key="frame" x="0.0" y="530" width="1024" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAc-gr-AYQ" userLabel="Special 2">
+                                        <rect key="frame" x="495" y="4" width="529" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Basic 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feZ-D7-IZp" userLabel="Special 1">
+                                        <rect key="frame" x="0.0" y="4" width="495" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Basic 1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewz-lb-tsF" userLabel="assessView">
+                                <rect key="frame" x="0.0" y="530" width="1024" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AA-yl-P6R" userLabel="Assessment 2">
+                                        <rect key="frame" x="495" y="4" width="529" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Basic 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLE-vg-PHI" userLabel="Assessment 1">
+                                        <rect key="frame" x="0.0" y="4" width="495" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Basic 1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MAO-0f-xju" userLabel="medsView">
+                                <rect key="frame" x="0.0" y="530" width="1024" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsT-Nf-3DB" userLabel="Medications 2">
+                                        <rect key="frame" x="495" y="4" width="529" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Basic 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nR3-8X-8w7" userLabel="Medications 1">
+                                        <rect key="frame" x="0.0" y="4" width="495" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Basic 1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bpa-e4-hiM" userLabel="basicView">
+                                <rect key="frame" x="0.0" y="530" width="1024" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15a-Cp-fcS">
+                                        <rect key="frame" x="495" y="4" width="529" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Basic 2"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eDJ-8c-WoF">
+                                        <rect key="frame" x="0.0" y="4" width="495" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                        <state key="normal" title="Basic 1"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="assessButton" destination="klK-bc-cnl" id="WU2-E4-3be"/>
+                        <outlet property="assessView" destination="Ewz-lb-tsF" id="bLS-JI-b6D"/>
+                        <outlet property="basicButton" destination="4z6-Pu-c4h" id="734-O7-tfn"/>
+                        <outlet property="basicView" destination="MAO-0f-xju" id="lLc-fV-XYp"/>
+                        <outlet property="cardiacButton" destination="RTq-xS-sos" id="TlY-oX-cYb"/>
+                        <outlet property="cardiacView" destination="p3B-JT-7FX" id="O8h-Vo-VjV"/>
+                        <outlet property="medButton" destination="2aj-HD-i9w" id="QNg-wi-yf1"/>
+                        <outlet property="medView" destination="MAO-0f-xju" id="vCz-KX-KGV"/>
                         <outlet property="pauseButton" destination="PUP-4h-hbK" id="vlg-mc-YRa"/>
                         <outlet property="playButton" destination="fxD-sH-EKf" id="r2u-af-040"/>
+                        <outlet property="procButton" destination="x3O-WG-Fe1" id="4rJ-iW-2BQ"/>
+                        <outlet property="procView" destination="Pk5-tW-xY2" id="BbT-Zj-FLt"/>
                         <outlet property="refreshButton" destination="fKw-tX-Hsl" id="347-6a-nmi"/>
-                        <outlet property="timerLabel" destination="xTw-BG-c5Q" id="xN1-kF-nOs"/>
+                        <outlet property="specialButton" destination="Emx-t3-tmC" id="ro8-g5-Ezu"/>
+                        <outlet property="specialView" destination="3es-Jr-ilY" id="AR1-jg-V9l"/>
+                        <outlet property="timerLabel" destination="xTw-BG-c5Q" id="8G5-6x-qos"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145.8984375" y="87.5"/>
+            <point key="canvasLocation" x="79.6875" y="35.9375"/>
         </scene>
     </scenes>
 </document>
